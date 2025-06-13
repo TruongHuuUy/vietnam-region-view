@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+# 🗺️ VietMapView
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Dự án hiển thị vùng địa lý Việt Nam bằng Nuxt 3 và Leaflet. Dữ liệu được tải từ file GeoJSON và hiển thị trực quan với popup thông tin như tên tỉnh, dân số, GRDP...
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 🚀 Tính năng
+
+- Hiển thị bản đồ nền từ OpenStreetMap
+- Tô màu từng tỉnh/thành với màu khác nhau
+- Tự động zoom vào vùng hiển thị
+- Popup thông tin hành chính chi tiết từ dữ liệu GeoJSON
+- Hỗ trợ nhiều vùng với định dạng `FeatureCollection`
+
+---
+
+## 🧱 Công nghệ sử dụng
+
+- [Nuxt 3](https://nuxt.com/)
+- [Leaflet.js](https://leafletjs.com/)
+- GeoJSON (dữ liệu địa lý)
+- TypeScript + Vue 3 + Composition API
+
+---
+
+## 📦 Cài đặt
 
 ```bash
-# npm
+git clone https://github.com/your-username/viet-map-view.git
+cd viet-map-view
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
