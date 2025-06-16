@@ -35,8 +35,8 @@ npm install
 
 ## 💖 Donate
 
-**VN:** Nếu bạn thấy extension này hữu ích và muốn ủng hộ mình:  
-**EN:** If this extension helped you, feel free to support me:
+**VN:** Nếu bạn thấy code này hữu ích và muốn ủng hộ mình:  
+**EN:** If this code helped you, feel free to support me:
 
 | Momo QR                      | Ngân Hàng                  |
 | ---------------------------- | -------------------------- |
