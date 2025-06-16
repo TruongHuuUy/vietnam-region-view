@@ -30,3 +30,22 @@ git clone https://github.com/your-username/viet-map-view.git
 cd viet-map-view
 npm install
 ```
+
+---
+
+## 💖 Donate
+
+**VN:** Nếu bạn thấy extension này hữu ích và muốn ủng hộ mình:  
+**EN:** If this extension helped you, feel free to support me:
+
+| Momo QR                      | Ngân Hàng                  |
+| ---------------------------- | -------------------------- |
+| ![Momo QR](assets/momo.jpeg) | ![ACB QR](assets/ACB.jpeg) |
+
+- Momo: **0943 704 750**
+- ACB: **Trương Hữu Uy – 1614557**
+- [☕ Mua cà phê cho tôi | Buy me a coffee](https://buymeacoffee.com/huuuy)
+
+🌟 **VN:** Cảm ơn bạn rất nhiều!  
+🌟 **EN:** Thank you so much!
+
