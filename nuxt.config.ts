@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     baseURL: "/vietnam-region-view/",
+    buildAssetsDir: "assets",
   },
   nitro: {
     preset: "static",
