@@ -45,21 +45,52 @@ const bindProvincePopup = (feature: any, layer: any) => {
 
 onMounted(async () => {
   if (!process.client || !mapRef.value) return;
+
+  // Import Leaflet chỉ phía client
   L = await import("leaflet");
+
   const geojsonData = geojsonRaw as FeatureCollection;
 
+  // Khởi tạo bản đồ
   const map = L.map(mapRef.value).setView([10.2, 105.2], 8);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "© OpenStreetMap contributors",
-  }).addTo(map);
+  // ✅ Tile nền: ArcGIS (đẹp, chất lượng, thân thiện chủ quyền)
+  L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+    {
+      attribution: "© Esri & contributors",
+      maxZoom: 19,
+    }
+  ).addTo(map);
 
+  // ✅ Overlay thông tin chủ quyền Việt Nam
+  L.marker([16.5, 111.5])
+    .addTo(map)
+    .bindTooltip("Quần đảo Hoàng Sa (Việt Nam)", {
+      permanent: true,
+      direction: "top",
+      className:
+        "text-red-600 font-bold bg-white border border-red-400 p-1 rounded",
+    });
+
+  L.marker([10.5, 114.5])
+    .addTo(map)
+    .bindTooltip("Quần đảo Trường Sa (Việt Nam)", {
+      permanent: true,
+      direction: "top",
+      className:
+        "text-red-600 font-bold bg-white border border-red-400 p-1 rounded",
+    });
+
+  // ✅ Hiển thị GeoJSON các tỉnh/thành
   const geoLayer = L.geoJSON(geojsonData, {
-    style: getProvinceStyle,
-    onEachFeature: bindProvincePopup,
+    style: getProvinceStyle, // Hàm style riêng theo tỉnh
+    onEachFeature: bindProvincePopup, // Hàm popup riêng
   });
 
   geoLayer.addTo(map);
+
+  // ✅ Zoom tự động
   map.fitBounds(geoLayer.getBounds());
 });
 </script>
