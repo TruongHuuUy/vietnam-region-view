@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "nuxt generate",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d .output/public"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
