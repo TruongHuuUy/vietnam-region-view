@@ -5,11 +5,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  ssr: false, // Chạy ở chế độ SPA (tĩnh)
+  ssr: false,
   app: {
-    baseURL: "/vietnam-region-view/", // Thay 'ten-repository' bằng tên repo của bạn
+    baseURL: "/vietnam-region-view/",
   },
   nitro: {
-    preset: "static", // Xuất tĩnh
+    preset: "static",
   },
 });
