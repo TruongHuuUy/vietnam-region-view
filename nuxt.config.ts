@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   ssr: false, // Chạy ở chế độ SPA (tĩnh)
   app: {
-    baseURL: "/vietnam-map/", // Thay 'ten-repository' bằng tên repo của bạn
+    baseURL: "/vietnam-region-view/", // Thay 'ten-repository' bằng tên repo của bạn
   },
   nitro: {
     preset: "static", // Xuất tĩnh
